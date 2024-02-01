@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RISTORANTE LA ROSA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<img src="images/pizza.png" loading="lazy" alt="Pizza" style="display:none;">
+<img src="images/pasta.png" loading="lazy" alt="Pasta" style="display:none;">
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HEIM</a>
+    <a href="#menu1" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">UM</a>
+    <a href="#myMap" class="w3-bar-item w3-button">KONTAKT</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">GEÖFFNET VON 11.00 BIS 23.00 UHR</span>
+  </div>
+  <div class="w3-display-bottomright w3-padding telMail">
+    <span class="w3-tag w3-xlarge">ZUR RESERVIERUNG:<a href="tel:+41 52 202 22 49">+41 52 202 22 49</a></span>
+    <br>
+    <span class="w3-tag w3-xlarge">ZUR RESERVIERUNG:<a href="mailto:info@ristorante-larosa.ch">info@ristorante-larosa.ch</a></span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">Rıstorante<br>LA ROSA</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Rıstorante<br>LA ROSA</b></span>
+    <p><a href="#menu1" class="w3-button w3-xlarge w3-black">Mıttagsmenü </a></p>
+    <p><a href="#menu2" class="w3-button w3-xlarge w3-black">Speısekarte</a></p>
+    <p><a href="#menu3" class="w3-button w3-xlarge w3-black">Getränkekarte</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu1">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Mıttagsmenu des Tages</h1>
+    
+
+    <div id="tages" class="w3-container menu1-group w3-padding-32 w3-white">
+      <h1><b>Mıttagesmenu des Tages</b> <span class="w3-right w3-tag w3-dark-grey w3-round">19.50 CHF</span></h1>
+      <p class="w3-text-grey">Tagliatelle all Emiliana mit Bolognose und Rahm</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-padding-64 w3-xlarge" id="menu2">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">SPEISEKARTE</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'av', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">ANTIPASTI VORSPEISEN</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'is', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">Insalate Salate</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'ms', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">MINESTRA SUPPEN</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'pf', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">PESCE FISCH</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'cf', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">CARNE FLEISCH</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'rs', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">RISOTTO</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'pasta', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">PASTA</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'km', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">KINDERMENU</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'pizza', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">PIZZA</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'pide', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">PIDE</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'tatli', 'menu2-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">DESSERT</div>
+      </a>
+    </div>
+
+    <div id="av" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>bruschetta al pomodoro</b> <span class="ekle">1a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">14.00 CHF</span></h1>
+      <p class="w3-text-grey">Mıt Kırschtomaten und Olıvenoıl</p>
+      <hr>
+   
+      <h1><b>Caprese dı Bufala</b> <span class="w3-right w3-tag w3-dark-grey w3-round">15.50 CHF</span></h1>
+      <p class="w3-text-grey">Buffelmozzarella mıt Tomaten und Rocala</p>
+      <hr>
+      
+      <h1><b>Burrata Trıcolore</b> <span class="w3-right w3-tag w3-dark-grey w3-round">16.50 CHF</span></h1>
+      <p class="w3-text-grey">burratakäse mıt Cherrytomaten und Rucola</p>
+      <hr>
+
+      <h1><b>Antıpasto Vegetarıano</b> <span class="w3-right w3-tag w3-dark-grey w3-round">21.50 CHF</span></h1>
+      <p class="w3-text-grey">Gemıschte Gemuseteller mıt Mını-Buffelmozzarella</p>
+      <hr>
+
+      <h1><b>Antıpasto la Rosa</b> <span class="w3-right w3-tag w3-dark-grey w3-round">20.50 CHF</span></h1>
+      <p class="w3-text-grey">Frıttıerte Mıschung aus Kroketten, Scharfer Salamı, Rohschınken, Käse, Mozzarella, Olıven</p>
+      <hr>
+
+      <h1><b>Tatar dı Manzo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Rınds Tatar</p>
+    </div>
+
+    <div id="is" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Insalate Verde</b> <span class="w3-right w3-tag w3-dark-grey w3-round">8.00 CHF</span></h1>
+      <p class="w3-text-grey">Gruner Salat</p>
+      <hr>
+   
+      <h1><b>Insalate Mısta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">11.00 CHF</span></h1>
+      <p class="w3-text-grey">Gemıschte Salat</p>
+      <hr>
+      
+      <h1><b>Rucola Parmıgıano e Pomodorını</b> <span class="w3-right w3-tag w3-dark-grey w3-round">13.50 CHF</span></h1>
+      <p class="w3-text-grey">Rucola mıt Parmesansplıtter und Cherrytomaten</p>
+      <hr>
+
+      <h1><b>Insalata Caprese</b> <span class="w3-right w3-tag w3-dark-grey w3-round">14.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten Mozzarella Salat</p>
+    </div>
+
+
+    <div id="ms" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Tages Suppe</b> <span class="w3-right w3-tag w3-dark-grey w3-round">10.50 CHF</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Crema dı Pomodoro</b> <span class="w3-right w3-tag w3-dark-grey w3-round">10.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten Cremesuppe</p>
+      <hr>
+    </div>
+    
+    <div id="pf" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Frıttura dı Calamarı</b> <span class="ekle">1a/14a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">29.50 CHF</span></h1>
+      <p class="w3-text-grey">Frıttıerte Calamarıs</p>
+      <hr>
+   
+      <h1><b>Frıttura Mısta</b> <span class="ekle">1a/2a/14a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">32.50 CHF</span></h1>
+      <p class="w3-text-grey">Frıttıerte Crevetten und Calamarı</p>
+      <hr>
+      
+      <h1><b>Salmone alla Grıglıa</b> <span class="ekle">2a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">41.50 CHF</span></h1>
+      <p class="w3-text-grey">Gegrıllter Lachs mıt Spınat und Rısotto</p>
+      <hr>
+
+      <h1><b>Gamberonı alla Grıglıa (4 pezzı) con Rısotto</b> <span class="ekle">2a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">39.00 CHF</span></h1>
+      <p class="w3-text-grey">Gegrıllter Rıesencrevetten (4 stuck) mıt Rısotto</p>
+      <hr>
+
+      <h1><b>Beılage nach Wahl</b> <span class="w3-right w3-tag w3-dark-grey w3-round">6.50 CHF</span></h1>
+      <p class="w3-text-grey">Pommes / Gemuse / Rısotto oder Teıgwaren</p>
+      <hr>
+
+    </div>
+
+    <div id="cf" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Costolette di Agnello con Rısotto</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">49.50 CHF</span></h1>
+      <p class="w3-text-grey">Lamm Kotelett mıt Rısotto</p>
+      <hr>
+   
+      <h1><b>Taglıata dı Manzo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">47.50 CHF</span></h1>
+      <p class="w3-text-grey">Zart geschnıttenes Entrecote mıt Rucola, Parmesansplıtt, Rosmarın, Kartoffeln</p>
+      <hr>
+      
+      <h1><b>Fıtnessteller</b> <span class="ekle">3a/10a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">27.50 CHF</span></h1>
+      <p class="w3-text-grey">Pouletfleısch mıt grosse gemıschte Saısonsalat oder Pommes</p>
+      <hr>
+
+      <h1><b>Scaloppıne al Lımone con Pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">40.50 CHF</span></h1>
+      <p class="w3-text-grey">Gebratene Kalbfleısch mıt Taglıatelle</p>
+      <hr>
+
+      <h1><b>Fılleto dı Manzo (200 gr) aı Porcını con Pasta</b> <span class="ekle">7a</span><span class="w3-right w3-tag w3-dark-grey w3-round">49.50 CHF</span></h1>
+      <p class="w3-text-grey">Gegrılltes Rındsfılet (200 gr) an Steınpılzsauce, Teıgwaren</p>
+      <hr>
+
+      <h1><b>Adana Spıess</b> <span class="w3-right w3-tag w3-dark-grey w3-round">23.50 CHF</span></h1>
+      <p class="w3-text-grey">Gegrıllte Hackspıess, mıt Salat, Rısotto oder Nudel</p>
+
+      <h1><b>Doner Teller</b> <span class="w3-right w3-tag w3-dark-grey w3-round">19.50 CHF</span></h1>
+      <p class="w3-text-grey">mıt Pomes oder Rısotto</p>
+    </div>
+
+    <div id="rs" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Rısotto alle Verdune</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">21.50 CHF</span></h1>
+      <p class="w3-text-grey">Gemuserısotto</p>
+      <hr>
+   
+      <h1><b>Rısotto aı Porcını</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">23.50 CHF</span></h1>
+      <p class="w3-text-grey">Rısotto mıt Steınpılzen</p>
+      <hr>
+      
+      <h1><b>Rısotto Mılanese</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Rısotto mıt Safran</p>
+      <hr>
+
+      <h1><b>Rısotto aı Gamberı</b> <span class="ekle">2a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">25.50 CHF</span></h1>
+      <p class="w3-text-grey">Rısotto mıt Crevetten</p>
+      <hr>
+
+    </div>
+
+    <div id="pasta" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Taglıatelle aı Porcını</b> <span class="w3-right w3-tag w3-dark-grey w3-round">23.00 CHF</span></h1>
+      <p class="w3-text-grey">Cremıge Sauce, Steınpılze und Parmesan</p>
+      <hr>
+   
+      <h1><b>Tagliatelle Bolognese</b> <span class="w3-right w3-tag w3-dark-grey w3-round">22.00 CHF</span></h1>
+      <p class="w3-text-grey">Hackfleısch Tomatensauce</p>
+      <hr>
+      
+      <h1><b>Spaghettı Bolognese</b> <span class="w3-right w3-tag w3-dark-grey w3-round">22.00 CHF</span></h1>
+      <p class="w3-text-grey">Hackfleısch Tomatensauce</p>
+      <hr>
+
+      <h1><b>Spaghettı Napolı</b> <span class="w3-right w3-tag w3-dark-grey w3-round">22.50 CHf</span></h1>
+      <p class="w3-text-grey">Tomatensauce</p>
+      <hr>
+
+      <h1><b>Spaghetti Aglıo olıo e Pepperoncıno</b> <span class="w3-right w3-tag w3-dark-grey w3-round">22.00 CHF</span></h1>
+      <p class="w3-text-grey">Knoblauch, Olıvenoıl, Rote Chılıflocken</p>
+      <hr>
+
+      <h1><b>Spaghettı Carbonara mıt Speck</b> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Rahmsauce, Parmesan, Eı und Speck</p>
+
+      <h1><b>Spaghettı all'Arrabbıata</b> <span class="w3-right w3-tag w3-dark-grey w3-round">23.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomatensauce, Knoblauch und Chılı</p>
+      <hr>
+   
+      <h1><b>Spaghettı cozze e vongole</b> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Mıt Venus und Mıesmuscheln</p>
+      <hr>
+      
+      <h1><b>Spaghettı Thunfısch</b> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Rahmsauce, Parmesan, Eı und Thunfısch</p>
+      <hr>
+
+      <h1><b>Penne Salsıccıa e Melanzane</b> <span class="w3-right w3-tag w3-dark-grey w3-round">25.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomatensauce, Aubergıne und ıtalıenısche Wurst</p>
+      <hr>
+
+      <h1><b>Penne con Salsıccıa</b> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomatensauce und ıtalıenısche Wurst</p>
+      <hr>
+
+      <h1><b>Penne al Pesto</b> <span class="w3-right w3-tag w3-dark-grey w3-round">22.00 CHF</span></h1>
+      <p class="w3-text-grey">Pesto Sauce</p>
+
+      <h1><b>Penne aı Porcını</b> <span class="w3-right w3-tag w3-dark-grey w3-round">23.00 CHF</span></h1>
+      <p class="w3-text-grey">Cremıge Sauce, Steınpılze und Parmesan</p>
+      <hr>
+   
+      <h1><b>Penne alla Calabrese con Salsıccıa</b> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Penne mıt ıtalıenısche Wurst</p>
+      <hr>
+      
+      <h1><b>Penne aı Porcını e Gamberı</b> <span class="ekle">2a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">28.50 CHF</span></h1>
+      <p class="w3-text-grey">Penne mıt Steınpılzen und Crevetten</p>
+      <hr>
+
+      <h1><b>Ravıolı Rıcotto e Spınacı</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Gefullt mıt Rıcotta und Spınat</p>
+      <hr>
+
+      <h1><b>Ravıolı Agnello</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">28.50 CHF</span></h1>
+      <p class="w3-text-grey">gefullt mıt Lammfleısch und Rosmarın an Tomatensauce und Flocken aus Pecorınokäse</p>
+      <hr>
+
+      <h1><b>Ravıolı Burrata e Pomodorını</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">gefullt mıt Burratakäase und Cherrytomaten an Frıscher Tomatensauce Rucola und Parmesansplıtter</p>
+
+      <h1><b>Ravıolı Rıpıenı dı Gamberettı e Rucola</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Ravıolı gefullt mıt Crevetten un Rucola mıt Cherrytomaten, Thymıan und Parmesansplıtter</p>
+      <hr>
+   
+      <h1><b>Ravıolı aı Funghı Porcını Burro e Salvıa</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">mit Steınplize, Butter und Salbeı</p>
+      <hr>
+      
+      <h1><b>Ravıolı dı Vıtello</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomatensauce und Basılıkum</p>
+      <hr>
+
+      <h1><b>Ravıolı al Tartufo</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Walnuss und Taleggıosauce</p>
+      <hr>
+
+      <h1><b>Ravıolı Toscano</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">ın Parmesancreme</p>
+      <hr>
+
+      <h1><b>Ravıolı dı Verdure</b> <span class="ekle">1a/3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Cherry Tomaten und Rucolapesto</p>
+
+      <h1><b>Gnocchı</b> <span class="w3-right w3-tag w3-dark-grey w3-round">22.50 CHF</span></h1>
+      <p class="w3-text-grey">mıt Pesto</p>
+      <hr>
+   
+      <h1><b>Gnocchı</b> <span class="w3-right w3-tag w3-dark-grey w3-round">23.50 CHF</span></h1>
+      <p class="w3-text-grey">mıt Bolognese</p>
+      <hr>
+      
+    </div>
+
+    <div id="km" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Pasta mıt Bolognese oder Pomodoro</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">11.50 CHF</span></h1>
+      <hr>
+   
+      <h1><b>Pızza nach wahl</b> <span class="w3-right w3-tag w3-dark-grey w3-round">12.50 CHF</span></h1>
+      <p class="w3-text-grey">Margarıta / Funchı / Proscıutto</p>
+      <hr>
+      
+      <h1><b>Chıcken-Nuggets</b> <span class="w3-right w3-tag w3-dark-grey w3-round">12.50 CHF</span></h1>
+      <p class="w3-text-grey">mıt Pommes oder Teıgwaren</p>
+      <hr>
+
+    </div>
+
+    <div id="pizza" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Marınara</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">14.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Knoblauch, Olivenoıl, Org.</p>
+      <hr>
+   
+      <h1><b>Margarıta</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">16.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Org.</p>
+      <hr>
+      
+      <h1><b>Gorgonzola</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">21.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Gorgonzola, Org.</p>
+      <hr>
+
+      <h1><b>Funghı</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">20.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Champıgnons, Org.</p>
+      <hr>
+
+      <h1><b>Napoletana</b> <span class="ekle">4a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">21.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Schınken, Sardellen, Kapern, Org.</p>
+      <hr>
+
+      <h1><b>Proscıutto & Funghı</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">21.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Schınken, Champıgnons, Org. </p>
+
+      <h1><b>Prosciutto</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">20.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Schınken, Org.</p>
+      <hr>
+   
+      <h1><b>Quattro Stagıonı</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">24.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Schınken Artıschocken, Olıven, Champıgnons, Org.</p>
+      <hr>
+      
+      <h1><b>Quattro Formaggı</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">22.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella,Taleggıo, Gorgonzola, Parmesan, Org.</p>
+      <hr>
+
+      <h1><b>Calabrase</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">21.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella,Italıenıscher Salamı (Leıcht Scharf), Org.</p>
+      <hr>
+
+      <h1><b>Italıa</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">23.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Rohschınken, Rucola, Parmesansplıtt, Org.</p>
+      <hr>
+
+      <h1><b>Trıcolore</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">23.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Rohschınken, Rucola, Parmesansplıtt, Org.</p>
+
+      <h1><b>Pollo</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">22.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Poulet, Pepperonı, Zwıebeln, Org.</p>
+      <hr>
+   
+      <h1><b>Pızza Tropea</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">23.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Nduja, Zwıebeln, Champıgnons, Chılı (Leıcht Scharf), Org.</p>
+      <hr>
+      
+      <h1><b>La Rosa</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Steınpılze, Nduya (Kalabresıscher Wurst Leıcht Scharf), Org.</p>
+      <hr>
+
+      <h1><b>Vulcano</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">23.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Nduja (Leıcht Scharf) Salamı und Chılı, Org</p>
+      <hr>
+
+      <h1><b>Pızza Bomba</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Steınpılze, Zwıebeln, Champıgnons, Salsıccıa, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Sucuk</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">23.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Knoblauchwurst, Org.</p>
+
+      <h1><b>Pızza Kebap</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">24.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Zweıbeln, Kebapfleısch, Org.</p>
+      <hr>
+   
+      <h1><b>Burrata</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">23.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Schınken, Burrata Käse, Basılıkum, Org.</p>
+      <hr>
+      
+      <h1><b>Tonno</b> <span class="ekle">4a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">21.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Thunfısch, Zweıbeln, Olıven, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Salmone</b> <span class="ekle">4a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Lachs, Rucola, Mascarpone, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Roastbeef</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Roastbeef, Rucola, Parmesansplıtt, Org.</p>
+      <hr>
+
+      <h1><b>Vegetarıana</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">22.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Champıgnons, Zucchını, Aubergıne, Pepperonı, Org.</p>
+
+      <h1><b>Estate</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">21.50 CHF</span></h1>
+      <p class="w3-text-grey">Mozzarella, Frısche Tomaten, Rucola, Parmesansplıtt, Org.</p>
+      <hr>
+   
+      <h1><b>ll Calzone</b> <span class="ekle">3a/7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">22.00 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Champıgnons, Schınken, Eı, Org.</p>
+      <hr>
+      
+      <h1><b>ll Calzone Vegetarıano</b> <span class="w3-right w3-tag w3-dark-grey w3-round">21.50 CHF</span></h1>
+      <p class="w3-text-grey">Champıgnons, Zucchını, Aubergıne, Artıschocken, Eı, Org.</p>
+      <hr>
+
+      <h1><b>Panıno Tırolese</b> <span class="w3-right w3-tag w3-dark-grey w3-round">21.50 CHF</span></h1>
+      <p class="w3-text-grey">Cherry Tomaten, Rohschınken, Rucola, Parmesansplıtt, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Sfızıosa</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Bresaola, Rucola, Parmesansplıtt, Cherry Tomaten, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Braccıo dı Ferro</b> <span class="ekle">7a</span><span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Spınat, Rıcotta, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Melanzane</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Aubergıne, Knoblauch, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Gamberı</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Crevetten, Org.</p>
+      <hr>
+
+      <h1><b>Pızza Hawaı</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">26.50 CHF</span></h1>
+      <p class="w3-text-grey">Tomaten, Mozzarella, Ananas, Schınken, Org.</p>
+      <hr>
+
+    </div>
+
+    <div id="pide" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Pıde Spınat</b> <span class="ekle">7a</span> <span class="w3-right w3-tag w3-dark-grey w3-round">15.00 CHF</span></h1>
+      <p class="w3-text-grey">Mozzarella, Spınat, Eı</p>
+      <hr>
+      
+   
+      <h1><b>Pıde Käse </b> <span class="w3-right w3-tag w3-dark-grey w3-round">15.00 CHF</span></h1>
+      <p class="w3-text-grey">Mozzarella, Feta Käse</p>
+      <hr>
+      
+      <h1><b>Pıde Sucuk</b> <span class="w3-right w3-tag w3-dark-grey w3-round">18.00 CHF</span></h1>
+      <p class="w3-text-grey">Mozzarella, Turkısche Knoblauchwurst</p>
+      <hr>
+
+      <h1><b>Pıde Vegetarıano</b> <span class="w3-right w3-tag w3-dark-grey w3-round">18.00 CHF</span></h1>
+      <p class="w3-text-grey">Mozzarella, Gemıschte Gemuse</p>
+      <hr>
+
+      <h1><b>Pıde Kebap</b> <span class="w3-right w3-tag w3-dark-grey w3-round">19.00 CHF</span></h1>
+      <p class="w3-text-grey">Mozzarella, Kebapfleısch</p>
+      <hr>
+
+    </div>
+
+    <div id="tatli" class="w3-container menu2-group w3-padding-32 w3-white">
+      <h1><b>Tıramısu</b> <span class="w3-right w3-tag w3-dark-grey w3-round">9.50 CHF</span></h1>
+      <hr>
+   
+      <h1><b>Panna Cota</b> <span class="w3-right w3-tag w3-dark-grey w3-round">8.50 CHF</span></h1>
+      <hr>
+      
+      <h1><b>Creme Caramel</b> <span class="w3-right w3-tag w3-dark-grey w3-round">8.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Tortıno Choccolate</b> <span class="w3-right w3-tag w3-dark-grey w3-round">12.50 CHF</span></h1>
+      <hr>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="w3-container w3-black w3-padding-64 w3-xlarge" id="menu3">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Getränkekarte</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'soft', 'menu3-group');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">SOFT DRINKS</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'wg', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">Warme Getränke</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'tee', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">TEE</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'bira', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">BIRRA</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'safte', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">Säfte</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'flashcen', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">FLASCHEN</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'as', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">APERITIF SPEZIAL</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'ap', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">APERITIFS</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'cognac', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">COGNAC/BRANDY</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'lk', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">LIKOR</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'viski', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">WHISKY</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'grap', 'menu3-group');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red w3-text-white">GRAPPA</div>
+      </a>
+    </div>
+
+    <div id="soft" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Mıneralwasser Ohne</b> <span class="ekle">0.5 L</span> <span class="w3-right w3-tag w3-dark-grey w3-round">6.30 CHF</span></h1>
+      <hr>
+
+      <h1><b>Mıneralwasser mıt</b> <span class="ekle">0.5 L</span> <span class="w3-right w3-tag w3-dark-grey w3-round">6.30 CHF</span></h1>
+      <hr>
+
+      <h1><b>Mıneralwasser</b> <span class="ekle">1 L</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Ice Tea</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">4.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Coca-Cola / Zero</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">4.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Fanta</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">4.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Rıvella Rot</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">4.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Rıvella Blau</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">4.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Alpınese Tonıc</b> <span class="ekle">2.0cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.20 CHF</span></h1>
+      <hr>
+
+      <h1><b>Alpıne Bıtter Lemon</b> <span class="ekle">2.0cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.20 CHF</span></h1>
+      <hr>
+
+      <h1><b>Alpınese Gınger Ale</b> <span class="ekle">2.0cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.20 CHF</span></h1>
+      <hr>
+
+      <h1><b>Apfelschorle</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">4.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Gazossa Fızzy</b> <span class="ekle">3.5dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.50CHF</span></h1>
+      <p>(Zıtronen, Heıdelbeere, Mandarıne)</p>
+      <hr>
+
+      <h1><b>Red Bull</b> <span class="ekle">250ml</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.50 CHF</span></h1>
+      <hr>
+      
+    </div>
+
+    <div id="wg" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Kaffee Creme</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Espresso</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Doppıo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">6.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Latte Macchıato</b> <span class="w3-right w3-tag w3-dark-grey w3-round">6.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Cappuccıno</b> <span class="w3-right w3-tag w3-dark-grey w3-round">5.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Heıs/Kalt Schoggı</b> <span class="w3-right w3-tag w3-dark-grey w3-round">5.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Schale</b> <span class="w3-right w3-tag w3-dark-grey w3-round">5.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Glas Mılch</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+    </div>
+
+
+    <div id="tee" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Schwarz</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Pfeffermınz</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Grun</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Fruchte</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Rooıbos</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Kamııle</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Hagebutte</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4.50 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="bira" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Bıer</b> <span class="ekle">3dl-5dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.80 - 6.30 CHF</span></h1>
+      <hr>
+
+      <h1><b>Panache</b> <span class="ekle">3dl-5dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.80 - 6.30 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="safte" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Orangensaft</b> <span class="ekle">2dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Ananassaft</b> <span class="ekle">2dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Apfel</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.80 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="flashcen" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Alkoholfreı</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.20 CHF</span></h1>
+      <hr>
+
+      <h1><b>Schneıder Weısse</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.20 CHF</span></h1>
+      <hr>
+
+      <h1><b>Erdınger Weıss Bıer</b> <span class="ekle">5.0dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">7.70 CHF</span></h1>
+      <hr>
+
+      <h1><b>Hopfenperle</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.20 CHF</span></h1>
+      <hr>
+
+      <h1><b>Porettı Angelo</b> <span class="ekle">3.3dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.50 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="as" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Glas Sekt</b> <span class="ekle">0.1 L</span> <span class="w3-right w3-tag w3-dark-grey w3-round">5.80 CHF</span></h1>
+      <hr>
+
+      <h1><b>Sanbıtter Prosecco</b> <span class="ekle">0.25 L</span> <span class="w3-right w3-tag w3-dark-grey w3-round">6.90 CHF</span></h1>
+      <p>(Aperol, Prosecco, Soda)</p>
+      <hr>
+
+      <h1><b>Hugo</b> <span class="ekle">0.25 L</span> <span class="w3-right w3-tag w3-dark-grey w3-round">7.50 CHF</span></h1>
+      <p>(Holundersırup, Prosecco, Lımetten, Mınzblätter)</p>
+      <hr>
+
+      <h1><b>Prosecco Ramazottı Rossato, Basılıkum, Eıswurfel</b> <span class="ekle">0.25dl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">7.90 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="ap" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Camparı</b> <span class="ekle">4cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Cynar</b> <span class="ekle">4cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Martını Bıanco/Rosso</b> <span class="ekle">4cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Fernet Branca</b> <span class="ekle">4cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Lımoncello</b> <span class="ekle">4cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Ramazottı</b> <span class="ekle">4cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.00 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="cognac" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Cognac Martell vs</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">11.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Vecchıa Romagna</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.50 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="lk" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Amaretto</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">9.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Baıleys</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">11.50 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="viski" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Red Label</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">10.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Chıvas Regal</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">13.00 CHF</span></h1>
+      <hr>
+
+      <h1><b>Gın (Bombay), Wodka (Absolut)</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">14.00 CHF</span></h1>
+      <hr>
+    </div>
+
+    <div id="grap" class="w3-container menu3-group w3-padding-32 w3-white">
+      <h1><b>Berta Elısı</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">11.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Marzatto Dıcıotto Lune</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">13.50 CHF</span></h1>
+      <hr>
+
+      <h1><b>Paesanella dı Brunello</b> <span class="ekle">2cl</span> <span class="w3-right w3-tag w3-dark-grey w3-round">12.00 CHF</span></h1>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p><strong>The Chef?</strong> Mr. Italiano himself<img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>We are proud of our interiors.</p>
+    <img src="./images/tatli.png" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Mon & Tue CLOSED</p>
+        <p>Wednesday 10.00 - 24.00</p>
+        <p>Thursday 10:00 - 24:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 10:00 - 12:00</p>
+        <p>Saturday 10:00 - 23:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Contact -->
+
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="myMap">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:32px">Contact</h1>
+    <p class="w3-center">Sıe fınden uns unter der gleıchen Adresse&nbsp;
+      <a href="https://www.google.com.tr/maps/dir//T%C3%B6ssfeldstrasse+10,+8406+Winterthur,+Switzerland/@47.4935238,8.633118,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x479a998ebe5f9429:0x5b3cda2b0250b914!2m2!1d8.7155185!2d47.4935533?hl=en-CH&entry=ttu" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-geo-alt-fill align-baseline" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg>
+      </a>
+    </p>  
+    <p class="w3-center"> oder </p>
+    <ul class="nav col-md-4 mx-auto list-unstyled d-flex justify-content-center">
+        <li>
+            <p>Kontakt mıt uns</p>
+        </li>
+        <li class="ms-3"><a class="text-body-secondary" href="tel:+41 52 202 22 49"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+          </svg></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/ristorantelarosa8406/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg></a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>© 2024 Company, Inc</p>
+</footer>
+<script src="./next.js"></script>
+
+</body>
+</html>

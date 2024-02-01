@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Amatic SC", sans-serif;
+}
+
+.menu1 {
+    display: none;
+}
+
+.menu2 {
+    display: none;
+}
+
+.menu3 {
+    display: none;
+}
+
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: 50% 100%, 50% 100%; 
+  background-image: url("images/pizza.png"), url("images/pasta.png");
+  background-position: left, right; 
+  min-height: 90%;
+  
+}
+
+.telMail a {
+  color: white; 
+  text-decoration: none; 
+}
+
+.telMail a:hover {
+  text-decoration: underline; 
+}
+
+.fp1{
+  color: white;
+}
+
+footer.color {
+  background-color: grey;
+}
+
+.ekle{
+  font-size: smaller;
+}
